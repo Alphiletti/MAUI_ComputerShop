@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AlpEren_180201074.Components"
+             Title="Components">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor"
+                    Value="Black" />
+        </Style>
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout BackgroundColor="Red">
+            <Frame BackgroundColor="White"
+                   Margin="20,0,20,20">
+                <Grid ColumnDefinitions="*,*"
+                      RowDefinitions="*,*">
+                    <VerticalStackLayout Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Label Text="CPU" Margin="20,0,0,0" TextDecorations="Underline" FontSize="Medium"/>
+                        <RadioButton Content="Core i3"
+                                     TextColor="Black"
+                                     CheckedChanged="RadioCPU_CheckedChanged"/>
+                        <RadioButton Content="Core i5"
+                                     TextColor="Black"
+                                     CheckedChanged="RadioCPU_CheckedChanged"/>
+                        <RadioButton Content="Core i7"
+                                     TextColor="Black"
+                                     CheckedChanged="RadioCPU_CheckedChanged"/>
+                        <RadioButton Content="Core i9"
+                                     TextColor="Black"
+                                     CheckedChanged="RadioCPU_CheckedChanged"/>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center">
+                        <Label Text="Storage"
+                               TextDecorations="Underline"
+                               FontSize="Medium" />
+                        <RadioButton Content="SSD"
+                                     TextColor="Black" 
+                                     CheckedChanged="RadioStorage_CheckedChanged"/>
+                        <RadioButton Content="HDD"
+                                     TextColor="Black"
+                                     CheckedChanged="RadioStorage_CheckedChanged" />
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Label Text="Monitor"
+                               TextDecorations="Underline"
+                               FontSize="Medium" />
+                        <RadioButton Content="Philips"
+                                     TextColor="Black" />
+                        <RadioButton Content="NEC"
+                                     TextColor="Black" />
+                        <RadioButton Content="HP"
+                                     TextColor="Black" />
+                    </VerticalStackLayout>
+
+                </Grid>
+            </Frame>
+            <HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                <Label Text="Alp Eren Velioğlu"
+                       FontSize="Medium" 
+                       Margin="0,0,30,0"
+                       TextColor="White"/>
+                <Label Text="180201074"
+                       FontSize="Medium" 
+                       TextColor="White"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

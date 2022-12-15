@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AlpEren_180201074.Payment"
+             Title="Payment">
+    <ScrollView>
+        <VerticalStackLayout BackgroundColor="Red">
+            <Frame BackgroundColor="White"
+                   Margin="20,0,20,20">
+                <Grid ColumnDefinitions="*,*"
+                      RowDefinitions="*,*,*,*,*,*">
+                    <VerticalStackLayout Grid.Row="0"
+                                         Grid.ColumnSpan="2">
+                        <Label Text="Cardholder Name"
+                               FontSize="Medium" 
+                               TextColor="Black"/>
+                        <Entry TextColor="Black"
+                               BackgroundColor="Gray"
+                               Keyboard="Text"/>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Grid.Row="1"
+                                         Grid.ColumnSpan="2">
+                        <Label Text="Card No."
+                               FontSize="Medium"
+                               TextColor="Black" />
+                        <Entry TextColor="Black"
+                               BackgroundColor="Gray"
+                               Keyboard="Numeric" />
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Grid.Row="2"
+                                         Grid.Column="0"
+                                         HorizontalOptions="Start">
+                        <Label Text="Date"
+                               FontSize="Medium"
+                               TextColor="Black" />
+                        <!--<Entry TextColor="Black"
+                               BackgroundColor="Gray"
+                               Keyboard="Numeric" />-->
+                        <DatePicker Date="{Binding dateTime}"
+                                    BackgroundColor="Gray"/>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Grid.Row="2"
+                                         Grid.Column="1"
+                                         HorizontalOptions="End">
+                        <Label Text="CVV"
+                               FontSize="Medium"
+                               TextColor="Black"
+                               HorizontalOptions="Center" />
+                        <Entry TextColor="Black"
+                               BackgroundColor="Gray"
+                               Keyboard="Numeric" />
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Grid.Row="3"
+                                         Grid.ColumnSpan="2">
+                        <RadioButton Content="Cache" TextColor="Black"/>
+                        <RadioButton Content="Installments" TextColor="Black"/>
+                    </VerticalStackLayout>
+                    <HorizontalStackLayout Grid.Row="4"
+                                           Grid.ColumnSpan="2"
+                                           HorizontalOptions="Center"
+                                           Margin="0,0,0,20">
+                        <Label x:Name="totalLbl"
+                               TextColor="Black"
+                               FontSize="Medium" 
+                               Text="{Binding Payment.TotalString}"/>
+                    </HorizontalStackLayout>
+                    <Button Grid.Row="5"
+                            Grid.ColumnSpan="2"
+                            WidthRequest="100"
+                            HeightRequest="50"
+                            BackgroundColor="Red"
+                            Text="Pay"
+                            TextColor="White"
+                            CornerRadius="20" 
+                            BorderColor="Black"
+                            x:Name="btnPay"
+                            Clicked="btnPay_Clicked"/>
+                </Grid>
+            </Frame>
+            <HorizontalStackLayout VerticalOptions="Center"
+                                   HorizontalOptions="Center">
+                <Label Text="Alp Eren Velioğlu"
+                       FontSize="Medium"
+                       Margin="0,0,30,0"
+                       TextColor="White" />
+                <Label Text="180201074"
+                       FontSize="Medium"
+                       TextColor="White" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell x:Class="AlpEren_180201074.AppShell"
+       xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:AlpEren_180201074"
+       Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <Tab Title="Home">
+            <ShellContent ContentTemplate="{DataTemplate local:Home}"
+                          Route="Home" />
+        </Tab>
+
+        <Tab Title="Components">
+            <ShellContent ContentTemplate="{DataTemplate local:Components}"
+                          Route="Components" />
+        </Tab>
+
+        <Tab Title="Sizes">
+            <ShellContent ContentTemplate="{DataTemplate local:Sizes}"
+                          Route="Sizes" />
+        </Tab>
+
+        <Tab Title="Payment">
+            <ShellContent ContentTemplate="{DataTemplate local:Payment}"
+                          Route="Payment" />
+        </Tab>
+    </TabBar>
+
+</Shell>

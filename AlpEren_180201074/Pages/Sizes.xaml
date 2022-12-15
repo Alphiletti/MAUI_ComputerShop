@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AlpEren_180201074.Sizes"
+             Title="Sizes">
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor"
+                    Value="Black" />
+        </Style>
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout BackgroundColor="Red">
+            <Frame BackgroundColor="White"
+                   Margin="20,0,20,20">
+                <Grid ColumnDefinitions="*"
+                      RowDefinitions="*,*,*,*,*,*,*">
+                    <Label Text="Memory Size GB"
+                           Grid.Row="0"
+                           HorizontalOptions="Center"
+                           FontSize="Medium"
+                           TextDecorations="Underline" />
+                    <HorizontalStackLayout Grid.Row="1"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"
+                                           Margin="0,0,0,30">
+                        <Button x:Name="btnMinusMemory"
+                                Text="-"
+                                WidthRequest="70"
+                                BorderColor="Black" 
+                                Clicked="btnMinusMemory_Clicked"/>
+                        <Label x:Name="memorySizeLbl" 
+                               Margin="-5,0,-5,0"
+                               FontSize="25"
+                               HeightRequest="50"
+                               HorizontalOptions="Center"
+                               HorizontalTextAlignment="Center"
+                               Text="4"
+                               VerticalOptions="Center"
+                               VerticalTextAlignment="Center"
+                               WidthRequest="100"
+                               BackgroundColor="Gray" />
+                        <Button x:Name="btnPlusMemory"
+                                Text="+"
+                                WidthRequest="70"
+                                BorderColor="Black" 
+                                Clicked="btnPlusMemory_Clicked"/>
+                    </HorizontalStackLayout>
+                    <Label Text="Storage Size GB"
+                           Grid.Row="2"
+                           HorizontalOptions="Center"
+                           FontSize="Medium"
+                           TextDecorations="Underline" />
+                    <HorizontalStackLayout Grid.Row="3"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"
+                                           Margin="0,0,0,30">
+                        <Button x:Name="btnMinusStorage"
+                                Text="-"
+                                WidthRequest="70"
+                                BorderColor="Black" 
+                                Clicked="btnMinusStorage_Clicked"/>
+                        <Label x:Name="storageSizeLbl"
+                               Margin="-5,0,-5,0"
+                               FontSize="25"
+                               HeightRequest="50"
+                               HorizontalOptions="Center"
+                               HorizontalTextAlignment="Center"
+                               Text="500GB"
+                               VerticalOptions="Center"
+                               VerticalTextAlignment="Center"
+                               WidthRequest="100"
+                               BackgroundColor="Gray" />
+                        <Button x:Name="btnPlusStorage"
+                                Text="+"
+                                WidthRequest="70"
+                                BorderColor="Black" 
+                                Clicked="btnPlusStorage_Clicked"/>
+                    </HorizontalStackLayout>
+                    <Label Text="Monitor Size inç"
+                           Grid.Row="4"
+                           HorizontalOptions="Center"
+                           FontSize="Medium"
+                           TextDecorations="Underline" />
+                    <HorizontalStackLayout Grid.Row="5"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center">
+                        <Button x:Name="btnMinusMonitor"
+                                Text="-"
+                                WidthRequest="70"
+                                BorderColor="Black" 
+                                Clicked="btnMinusMonitor_Clicked"/>
+                        <Label x:Name="monitorSizeLbl"
+                               Margin="-5,0,-5,0"
+                               FontSize="25"
+                               HeightRequest="50"
+                               HorizontalOptions="Center"
+                               HorizontalTextAlignment="Center"
+                               Text="17"
+                               VerticalOptions="Center"
+                               VerticalTextAlignment="Center"
+                               WidthRequest="100"
+                               BackgroundColor="Gray" />
+                        <Button x:Name="btnPlusMonitor"
+                                Text="+"
+                                WidthRequest="70"
+                                BorderColor="Black" 
+                                Clicked="btnPlusMonitor_Clicked"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Grid.Row="6"
+                                           HorizontalOptions="Center"
+                                           Margin="0,0,0,20">
+                        <Label x:Name="totalLbl"
+                               TextColor="Black"
+                               FontSize="Medium"
+                               Text="{Binding Payment.TotalString}" />
+                    </HorizontalStackLayout>
+                </Grid>
+            </Frame>
+            <HorizontalStackLayout VerticalOptions="Center"
+                                   HorizontalOptions="Center">
+                <Label Text="Alp Eren Velioğlu"
+                       FontSize="Medium"
+                       Margin="0,0,30,0"
+                       TextColor="White" />
+                <Label Text="180201074"
+                       FontSize="Medium"
+                       TextColor="White" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
