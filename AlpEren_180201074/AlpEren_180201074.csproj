@@ -49,6 +49,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\component.png" />
+	  <None Remove="Resources\Images\homeicon.png" />
+	  <None Remove="Resources\Images\payment.png" />
+	  <None Remove="Resources\Images\size.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Pages\Components.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

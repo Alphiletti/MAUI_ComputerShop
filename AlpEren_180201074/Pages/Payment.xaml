@@ -16,7 +16,8 @@
                                TextColor="Black"/>
                         <Entry TextColor="Black"
                                BackgroundColor="Gray"
-                               Keyboard="Text"/>
+                               Keyboard="Text"
+                               x:Name="entry_cardholder"/>
                     </VerticalStackLayout>
                     <VerticalStackLayout Grid.Row="1"
                                          Grid.ColumnSpan="2">
@@ -25,7 +26,8 @@
                                TextColor="Black" />
                         <Entry TextColor="Black"
                                BackgroundColor="Gray"
-                               Keyboard="Numeric" />
+                               Keyboard="Numeric" 
+                               x:Name="entry_cardno"/>
                     </VerticalStackLayout>
                     <VerticalStackLayout Grid.Row="2"
                                          Grid.Column="0"
@@ -48,11 +50,12 @@
                                HorizontalOptions="Center" />
                         <Entry TextColor="Black"
                                BackgroundColor="Gray"
-                               Keyboard="Numeric" />
+                               Keyboard="Numeric" 
+                               x:Name="entry_CVV"/>
                     </VerticalStackLayout>
                     <VerticalStackLayout Grid.Row="3"
                                          Grid.ColumnSpan="2">
-                        <RadioButton Content="Cache" TextColor="Black"/>
+                        <RadioButton Content="Cache" TextColor="Black" IsChecked="True"/>
                         <RadioButton Content="Installments" TextColor="Black"/>
                     </VerticalStackLayout>
                     <HorizontalStackLayout Grid.Row="4"
@@ -61,20 +64,28 @@
                                            Margin="0,0,0,20">
                         <Label x:Name="totalLbl"
                                TextColor="Black"
-                               FontSize="Medium" 
-                               Text="{Binding Payment.TotalString}"/>
+                               FontSize="Medium"/>
                     </HorizontalStackLayout>
-                    <Button Grid.Row="5"
-                            Grid.ColumnSpan="2"
-                            WidthRequest="100"
-                            HeightRequest="50"
-                            BackgroundColor="Red"
-                            Text="Pay"
-                            TextColor="White"
-                            CornerRadius="20" 
-                            BorderColor="Black"
-                            x:Name="btnPay"
-                            Clicked="btnPay_Clicked"/>
+                    <HorizontalStackLayout Grid.Row="5" Grid.ColumnSpan="2" HorizontalOptions="Center">
+                        <Button WidthRequest="100"
+                                HeightRequest="50"
+                                BackgroundColor="Red"
+                                Text="Pay"
+                                TextColor="White"
+                                CornerRadius="20"
+                                BorderColor="Black"
+                                x:Name="btnPay"
+                                Clicked="btnPay_Clicked" />
+                        <!--<Button WidthRequest="150"
+                                HeightRequest="50"
+                                BackgroundColor="Tomato"
+                                Text="Refresh Price"
+                                TextColor="White"
+                                CornerRadius="20"
+                                BorderColor="Black"
+                                Clicked="RefreshPrice_Clicked" />-->
+                        <!--I use OnAppearing methods so the price is refreshing when the tab page is changed-->
+                    </HorizontalStackLayout>
                 </Grid>
             </Frame>
             <HorizontalStackLayout VerticalOptions="Center"

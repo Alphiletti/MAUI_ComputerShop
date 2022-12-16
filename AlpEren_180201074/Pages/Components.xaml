@@ -47,11 +47,14 @@
                                TextDecorations="Underline"
                                FontSize="Medium" />
                         <RadioButton Content="Philips"
-                                     TextColor="Black" />
+                                     TextColor="Black"
+                                     CheckedChanged="RadioBrand_CheckedChanged"/>
                         <RadioButton Content="NEC"
-                                     TextColor="Black" />
+                                     TextColor="Black"
+                                     CheckedChanged="RadioBrand_CheckedChanged"/>
                         <RadioButton Content="HP"
-                                     TextColor="Black" />
+                                     TextColor="Black"
+                                     CheckedChanged="RadioBrand_CheckedChanged"/>
                     </VerticalStackLayout>
 
                 </Grid>

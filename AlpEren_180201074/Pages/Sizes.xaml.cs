@@ -20,6 +20,14 @@ public partial class Sizes : ContentPage
 	public Sizes()
 	{
 		InitializeComponent();
+        Application.Current.UserAppTheme = AppTheme.Light;
+        PerformSize.SectionCalculate();
+        totalLbl.Text = "Total: " + Payment.TotalString;
+    }
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
         PerformSize.SectionCalculate();
         totalLbl.Text = "Total: " + Payment.TotalString;
     }

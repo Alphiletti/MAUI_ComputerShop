@@ -46,7 +46,7 @@
                                 BorderColor="Black" 
                                 Clicked="btnPlusMemory_Clicked"/>
                     </HorizontalStackLayout>
-                    <Label Text="Storage Size GB"
+                    <Label Text="Storage Size"
                            Grid.Row="2"
                            HorizontalOptions="Center"
                            FontSize="Medium"

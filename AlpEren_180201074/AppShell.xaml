@@ -6,22 +6,25 @@
        Shell.FlyoutBehavior="Disabled">
 
     <TabBar>
-        <Tab Title="Home">
+        <Tab Title="Home" Icon="homeicon.png">
             <ShellContent ContentTemplate="{DataTemplate local:Home}"
                           Route="Home" />
         </Tab>
 
-        <Tab Title="Components">
+        <Tab Title="Components"
+             Icon="component.png">
             <ShellContent ContentTemplate="{DataTemplate local:Components}"
                           Route="Components" />
         </Tab>
 
-        <Tab Title="Sizes">
+        <Tab Title="Sizes"
+             Icon="size.png">
             <ShellContent ContentTemplate="{DataTemplate local:Sizes}"
                           Route="Sizes" />
         </Tab>
 
-        <Tab Title="Payment">
+        <Tab Title="Payment"
+             Icon="payment.png">
             <ShellContent ContentTemplate="{DataTemplate local:Payment}"
                           Route="Payment" />
         </Tab>
